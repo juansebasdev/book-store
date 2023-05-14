@@ -1,0 +1,6 @@
+[submodule "book-store-front"]
+	path = book-store-front
+	url = git@github.com:juansebasdev/book-store-front.git
+[submodule "book-store-back"]
+	path = book-store-back
+	url = git@github.com:juansebasdev/book-store-back.git

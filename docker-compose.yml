@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  front:
+    depends_on:
+      - back
+    image: juansebasbravo/book-front
+    container_name: books-app-front
+    ports:
+      - 80:80
+  
+  back:
+    image: juansebasbravo/book-back
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+      - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
+    container_name: books-app
